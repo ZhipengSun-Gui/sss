@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+      integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+      integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+      crossorigin="anonymous"
+    />
+    <script src="./js/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p>
+          Homework
+        </p>
+      </header>
+      <main>
+        <content id="scoreBoard" class="flex">
+          <p>
+            <span class="label">Word:</span>
+            <span id="word"></span>
+          </p>
+          <p>
+            <span class="label">Score:</span>
+            <span id="score">0</span>
+            (+<span id="currentScore">0</span>)
+          </p>
+          <p>
+            <span class="label">Remaining Tiles:</span>
+            <span id="remainingTiles"></span>
+          </p>
+          <p>
+            <span class="label">Highest Score:</span>
+            <span id="highestScore"></span>
+          </p>
+        </content>
+
+        <div id="board"></div>
+
+        <div id="instruction">
+          <p>
+            Create one word with no gap between letters.<img
+              id="oneWordCheckIcon"
+              src="img/checkIcon.png"
+              class="instructionIcon"
+              alt="Checked"
+            />
+          </p>
+          <p>
+            The word must contain at least 2 letters.<img
+              id="minLengthIcon"
+              src="img/checkIcon.png"
+              class="instructionIcon"
+              alt="Checked"
+            />
+          </p>
+          <p>
+            The word must be found in the dictionary.<img
+              id="dictionaryCheckIcon"
+              src="img/checkIcon.png"
+              class="instructionIcon"
+              alt="Checked"
+            />
+          </p>
+        </div>
+
+        <div class="buttonBox">
+          <button
+            id="nextWordButton"
+            class="ui-button ui-widget ui-corner-all"
+            onclick="nextWord()"
+          >
+            Next Word
+          </button>
+          <button
+            id="restartButton"
+            class="ui-button ui-widget ui-corner-all"
+            onclick="restart()"
+          >
+            Start Over
+          </button>
+        </div>
+
+        <div id="letterRack"></div>
+      </main>
+    </div>
+  </body>
+</html>
